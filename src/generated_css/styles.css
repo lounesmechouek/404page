@@ -1,18 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Inconsolata";
-  src: url("./Inconsolata-Regular.ttf") format("truetype");
-  font-style: normal;
+  src: url("/assets/fonts/Inconsolata-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("./Montserrat-Regular.ttf") format("truetype");
-  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "SpaceMono";
-  src: url("./SpaceMono-Regular.ttf") format("truetype");
-  font-style: normal;
+  src: url("/assets/fonts/SpaceMono-Regular.ttf") format("truetype");
 }
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
@@ -115,6 +112,7 @@ iframe {
 
 body {
   background: #ffffff;
+  overflow: hidden;
 }
 
 /*.container {
@@ -130,11 +128,10 @@ body {
   }
 }*/
 .p-title {
-  position: absolute;
   width: 133px;
   height: 25px;
-  left: 77px;
-  top: 40px;
+  margin-left: 40px;
+  margin-top: 33px;
 }
 .p-title h1 {
   font-family: "Inconsolata";
@@ -144,7 +141,121 @@ body {
   line-height: 25px;
   letter-spacing: -0.08em;
   text-transform: uppercase;
-  color: red;
+  color: #333333;
+}
+
+.p-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+  margin-left: 40px;
+}
+
+.p-elements_img img {
+  height: 447px;
+  width: 539px;
+  border-radius: 0px;
+}
+
+.p-elements_txt {
+  display: block;
+}
+
+.p-elements_txt_header {
+  width: 586px;
+  height: 190px;
+}
+.p-elements_txt_header h1 {
+  font-family: "SpaceMono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 53.76px;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  color: #333333;
+}
+
+.p-elements_txt_prg {
+  width: 381px;
+  height: 108px;
+  margin-top: 2%;
+}
+.p-elements_txt_prg p {
+  font-family: "SpaceMono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20.16px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.p-elements_txt_btn {
+  width: 216px;
+  height: 68px;
+  margin-top: 7%;
+}
+
+@media (max-width: 1221px) {
+  .p-title {
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+
+  .p-elements {
+    display: block;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .p-elements_img {
+    margin-left: 24px;
+  }
+  .p-elements_img img {
+    height: 238px;
+    width: 287px;
+  }
+
+  .p-elements_txt_header {
+    width: 350px;
+    height: 142px;
+    margin-top: 8%;
+  }
+  .p-elements_txt_header h1 {
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: -0.035em;
+  }
+
+  .p-elements_txt_prg {
+    width: 328px;
+    height: 81px;
+    margin-top: 2%;
+  }
+  .p-elements_txt_prg p {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.035em;
+  }
+}
+.btn {
+  padding: 0.2em 0.5em;
+  background-color: #333333;
+}
+.btn a {
+  font-family: "SpaceMono";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-left: 38px;
+  margin-top: 18px;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=styles.css.map */
